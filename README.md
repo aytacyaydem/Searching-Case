@@ -2,6 +2,7 @@
 
 This project is an case study work.
 Project was developed within: **React, SASS, Bootstrap 5, React Testing Library, Webpack**
+Node.js version: **v17.5.0** 
 
 ## Available Scripts
 
