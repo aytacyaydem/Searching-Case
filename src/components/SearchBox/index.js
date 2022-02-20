@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 import CustomerData from "../../api/index";
 import { debounce } from "lodash";
 import { Collapse } from "bootstrap";
+import { BsFillTelephoneFill, BsFillEnvelopeFill } from "react-icons/bs";
 
 function SearchBox() {
   const [value, setValue] = useState("");
@@ -51,9 +52,29 @@ function SearchBox() {
       <div className="collapse" id="collapseExample">
         {result.map((customer) => {
           return (
-            <div className="card card-body">
-              <div>{customer.customerName}</div>
-              <div>{customer.customerPolicyNumber}</div>
+            <div className="card card-body shadow">
+              <div className="row mb-2">
+                <div className="col-md-12">
+                  {customer.customerName} {customer.customerSurname}
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-md-6 d-flex align-items-center">
+                  <div className="phone-number d-flex align-items-center">
+                    <BsFillTelephoneFill />
+                    <span className="mx-2">{customer.customerphone}</span>
+                  </div>
+                  <div className="mail-adress d-flex align-items-center mx-5">
+                    <BsFillEnvelopeFill />
+                    <span className="mx-2">{customer.customerEmail}</span>
+                  </div>
+                </div>
+                <div className="col-md-6 d-flex">
+                  <div className="policy-number">
+                    Policy No: {customer.customerPolicyNumber}
+                  </div>
+                </div>
+              </div>
             </div>
           );
         })}

@@ -39,6 +39,38 @@ const customerArray = [
     customerphone: "05443212323",
     customerPolicyNumber: "098324129",
   },
+  {
+    customerID: 5,
+    customerName: "Tuna",
+    customerSurname: "Ertuğrul",
+    customerEmail: "tunaertugrul@gmail.com",
+    customerphone: "05330232123",
+    customerPolicyNumber: "119836234",
+  },
+  {
+    customerID: 6,
+    customerName: "Gizem",
+    customerSurname: "Şenay",
+    customerEmail: "gizemsenay@gmail.com",
+    customerphone: "05321204232",
+    customerPolicyNumber: "812236234",
+  },
+  {
+    customerID: 7,
+    customerName: "Gül",
+    customerSurname: "Öztürk",
+    customerEmail: "gulozturk@gmail.com",
+    customerphone: "05301232925",
+    customerPolicyNumber: "987364923",
+  },
+  {
+    customerID: 8,
+    customerName: "Seda",
+    customerSurname: "Bilek",
+    customerEmail: "sedabilek@gmail.com",
+    customerphone: "05351242922",
+    customerPolicyNumber: "987364923",
+  },
 ];
 
 export default customerArray;
