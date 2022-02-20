@@ -1,7 +1,7 @@
 # Searching Case
 
 This project is an case study work.
-Project was developed withing: React, SASS, Bootstrap 5, React Testing Library, Webpack
+Project was developed withing: **React, SASS, Bootstrap 5, React Testing Library, Webpack**
 
 ## Available Scripts
 
