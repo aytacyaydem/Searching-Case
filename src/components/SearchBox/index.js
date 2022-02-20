@@ -59,7 +59,10 @@ function SearchBox() {
             <div className="collapse" id="collapseExample">
               {result.map((customer) => {
                 return (
-                  <div className="card card-body shadow">
+                  <div
+                    className="card card-body shadow"
+                    key={customer.customerID}
+                  >
                     <div className="row mb-2">
                       <div className="col-md-12">
                         {customer.customerName} {customer.customerSurname}
