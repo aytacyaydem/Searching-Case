@@ -39,47 +39,57 @@ function SearchBox() {
     setResult(customersToShow);
   };
   return (
-    <div className="search-box-wrapper">
-      <div className="search-box">
-        <input
-          className="search-box__input"
-          onChange={debouncedChangeHandler}
-          ref={inputRef}
-          type="text"
-          placeholder="Search (Client Name / Policy Number)"
-        />
+    <>
+      <div className="row w-100">
+        <div className="col-md-12 px-0 mx-0">
+          <div className="search-box">
+            <input
+              className="search-box__input"
+              onChange={debouncedChangeHandler}
+              ref={inputRef}
+              type="text"
+              placeholder="Search (Client Name / Policy Number)"
+            />
+          </div>
+        </div>
       </div>
-      <div className="collapse" id="collapseExample">
-        {result.map((customer) => {
-          return (
-            <div className="card card-body shadow">
-              <div className="row mb-2">
-                <div className="col-md-12">
-                  {customer.customerName} {customer.customerSurname}
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md-6 d-flex align-items-center">
-                  <div className="phone-number d-flex align-items-center">
-                    <BsFillTelephoneFill />
-                    <span className="mx-2">{customer.customerphone}</span>
+      <div className="search-box-wrapper">
+        <div className="row">
+          <div className="col-md-12 px-0 mx-0">
+            <div className="collapse" id="collapseExample">
+              {result.map((customer) => {
+                return (
+                  <div className="card card-body shadow">
+                    <div className="row mb-2">
+                      <div className="col-md-12">
+                        {customer.customerName} {customer.customerSurname}
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-6 d-flex align-items-center">
+                        <div className="phone-number d-flex align-items-center">
+                          <BsFillTelephoneFill />
+                          <span className="mx-2">{customer.customerphone}</span>
+                        </div>
+                        <div className="mail-adress d-flex align-items-center mx-5">
+                          <BsFillEnvelopeFill />
+                          <span className="mx-2">{customer.customerEmail}</span>
+                        </div>
+                      </div>
+                      <div className="col-md-6 d-flex">
+                        <div className="policy-number">
+                          Policy No: {customer.customerPolicyNumber}
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="mail-adress d-flex align-items-center mx-5">
-                    <BsFillEnvelopeFill />
-                    <span className="mx-2">{customer.customerEmail}</span>
-                  </div>
-                </div>
-                <div className="col-md-6 d-flex">
-                  <div className="policy-number">
-                    Policy No: {customer.customerPolicyNumber}
-                  </div>
-                </div>
-              </div>
+                );
+              })}
             </div>
-          );
-        })}
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
